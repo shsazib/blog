@@ -1,19 +1,22 @@
-<div class="">
+<div class="grid gap-5">
     <div class="grid">
         <label for="title">Title</label>
-        <input type="text" id="title" placeholder="Title" name="title">
+        <input type="text" id="title" required value="<%= articles.title %>" placeholder="Title" name="title"
+            class="outline-none border border-green-500 p-2 max-w-[300px]">
     </div>
     <div class="grid">
         <label for="description">Description</label>
-        <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+        <textarea name="description" required value="<%= articles.description %>" id="description" cols="30" rows="5"
+            placeholder="Description" class="outline-none border border-green-500 p-2 max-w-[300px]"></textarea>
     </div>
     <div class="grid">
         <label for="markdown">Markdown</label>
-        <input type="text" id="markdown" placeholder="Markdown" name="markdown">
+        <input type="text" id="markdown" required value="<%= articles.markdown %>" placeholder="Markdown" name="markdown"
+            class="outline-none border border-green-500 p-2 max-w-[300px]">
     </div>
 
     <div class="">
-<a href="/" class="inline-block px-5 py-3 bg-gray-500 text-white rounded-lg">Cancel</a>
+        <a href="/" class="inline-block px-5 py-3 bg-gray-500 text-white rounded-lg">Cancel</a>
         <button type="submit" class="inline-block px-5 py-3 bg-blue-500 text-white rounded-lg">Save</button>
     </div>
 </div>
