@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="http://localhost:5000/css/output.css">
 </head>
 <body>
     <div class="container mx-auto">
@@ -17,6 +17,13 @@
                     <h1 class=""><%= article.title %></h1>
                     <p class=""><%= article.createdAt.toLocaleDateString() %></p>
                     <p class=""><%= article.description %></p>
+                    <p class=""><%= article.markdown %></p>
+                    <div class="flex gap-5">
+                        <a href="articles/<%= article.slug %>" class="inline-block px-5 py-2 bg-blue-500 text-white rounded-lg">Read More</a>
+                        <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="inline-block px-5 py-2 bg-red-500 text-white rounded-lg">Delete</button>
+                        </form>
+                    </div>
                 </div>
             <% }) %>
             <div class=""></div>
